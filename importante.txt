@@ -1,0 +1,19 @@
+IMPORTANTE
+- Mejorar con lo mínimo posible. No tanto archivos, cosas más simples ejemplo:
+-- crear proyecto base manualmente (doc oficial)
+-- definir reglas globales (detallada cada capa y ojalá con ejemplos) para que no cree por ejemplo services sin clases, capas sin estructura buena, layouts en una app especifica, tipados, etc.
+-- definir requisitos (en una carpeta y versionados)
+-- definir to-do (task) paso a paso, ojalá agrupados en 1.1, 1.2, 1.3, y ejecutar uno a uno
+-- verificar cada código del task, y que se ejecute bien, continuar con tasks siguientes
+
+PENDIENTES:
+- Probar con copilot o herramientas gratuitas
+- Completar con github actions y otras cosas
+- Tomar un proyecto ya construido y añadir cosas de desarrollo asistido por IA (lo que definimos acá)
+
+PROBLEMAS CON ESTE EJERCICIO:
+- Que cochinada el scafolding que generó de Django. Middlewares faltantes (CSRF), apps faltantes, y quien sabe que cosas faltaron
+- Estructura de algunos archivos no me convence
+
+VENTAJAS:
+- Vaina super rápida, con tests, que prueba todo y funciona
