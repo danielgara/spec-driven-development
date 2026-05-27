@@ -49,3 +49,12 @@ feature.
 - Base layout provides stable navigation links between homepage and catalog.
 - Catalog entries provide links to detail pages.
 - Not-found and empty-state views provide clear path back to browsing routes.
+
+## Implementation Alignment Notes
+
+- Implemented route names:
+  - `home` -> `/`
+  - `book-list` -> `/books/`
+  - `book-detail` -> `/books/<book_id>/`
+- Detail not-found uses Django `Http404` and renders custom `404.html`.
+- Catalog supports combined query filtering with `q` and `category`.

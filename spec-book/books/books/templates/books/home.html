@@ -1,0 +1,30 @@
+{% extends "books/base.html" %}
+
+{% block title %}Home | Book Manager{% endblock %}
+
+{% block content %}
+<div class="d-flex justify-content-between align-items-center mb-4">
+    <h1 class="h3 mb-0">Featured Books</h1>
+    <a class="btn btn-outline-primary" href="{% url 'book-list' %}">Browse all books</a>
+</div>
+
+{% if featured_books %}
+    <div class="row g-3">
+        {% for book in featured_books %}
+            <div class="col-md-4">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <h2 class="h5 card-title">{{ book.title }}</h2>
+                        <p class="text-muted mb-1">{{ book.author }}</p>
+                        <p class="small badge text-bg-secondary">{{ book.category }}</p>
+                        <p class="card-text">{{ book.description }}</p>
+                        <a class="btn btn-sm btn-primary" href="{% url 'book-detail' book.id %}">View details</a>
+                    </div>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+{% else %}
+    <div class="alert alert-info">No featured books are available right now.</div>
+{% endif %}
+{% endblock %}

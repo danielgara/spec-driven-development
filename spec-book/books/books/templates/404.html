@@ -1,0 +1,11 @@
+{% extends "books/base.html" %}
+
+{% block title %}Not Found | Book Manager{% endblock %}
+
+{% block content %}
+<div class="alert alert-danger">
+    <h1 class="h4">Book not found</h1>
+    <p>The requested book does not exist or is no longer available.</p>
+    <a class="btn btn-primary" href="{% url 'book-list' %}">Back to catalog</a>
+</div>
+{% endblock %}

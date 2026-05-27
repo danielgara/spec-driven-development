@@ -1,0 +1,26 @@
+{% extends "books/base.html" %}
+
+{% block title %}Books | Book Manager{% endblock %}
+
+{% block content %}
+<h1 class="h3 mb-3">Book Catalog</h1>
+{% include "books/partials/book_filters.html" %}
+
+{% if books %}
+    <div class="list-group">
+        {% for book in books %}
+            <a href="{% url 'book-detail' book.id %}" class="list-group-item list-group-item-action">
+                <div class="d-flex w-100 justify-content-between">
+                    <h2 class="h6 mb-1">{{ book.title }}</h2>
+                    <small class="text-muted">{{ book.category }}</small>
+                </div>
+                <p class="mb-1">{{ book.author }}</p>
+            </a>
+        {% endfor %}
+    </div>
+{% else %}
+    <div class="alert alert-warning">
+        No books match your current search or category filter.
+    </div>
+{% endif %}
+{% endblock %}
