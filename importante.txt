@@ -10,6 +10,7 @@ PENDIENTES:
 - Probar con copilot o herramientas gratuitas
 - Completar con github actions y otras cosas
 - Tomar un proyecto ya construido y añadir cosas de desarrollo asistido por IA (lo que definimos acá)
+- Definir un proceso sencillo, paso a paso, para implementar desarrollo asistido por IA, de manera organizada, replicable, sin librerias, etc, y versionado
 
 PROBLEMAS CON ESTE EJERCICIO:
 - Que cochinada el scafolding que generó de Django. Middlewares faltantes (CSRF), apps faltantes, y quien sabe que cosas faltaron
